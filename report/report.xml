@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="hr_recruit_appointment_letter" model="ir.actions.report">
+        <field name="name">Appointment Letter</field>
+        <field name="model">hr.applicant</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">ap_recruitment18.appointment_letter</field>
+        <field name="report_file">ap_recruitment18.appointment_letter</field>
+        <field name="print_report_name">'Print Appointment - %s' % (object.short_name).replace('/', '')</field>
+        <field name="binding_model_id" ref="model_hr_applicant"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <record id="hr_recruit_offer_letter" model="ir.actions.report">
+        <field name="name">Offer Letter</field>
+        <field name="model">hr.applicant</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">ap_recruitment18.offer_letter</field>
+        <field name="report_file">ap_recruitment18.offer_letter</field>
+        <field name="print_report_name">'offer_letter - %s' % (object.short_name).replace('/', '')</field>
+        <field name="binding_model_id" ref="model_hr_applicant"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <record id="hr_recruit_appointment_letter" model="ir.actions.report">
+        <field name="name">Appointment Letter</field>
+        <field name="model">hr.applicant</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">ap_recruitment18.appointment_letter</field>
+        <field name="report_file">ap_recruitment18.appointment_letter</field>
+        <field name="print_report_name">'Print Appointment - %s' % (object.short_name).replace('/', '')</field>
+        <field name="binding_model_id" ref="model_hr_applicant"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <record id="hr_recruit_appointment_letter_individual" model="ir.actions.report">
+        <field name="name">Appointment Letter Individual</field>
+        <field name="model">hr.applicant</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">ap_recruitment18.appointment_letter_individual</field>
+        <field name="report_file">ap_recruitment18.appointment_letter_individual</field>
+        <field name="print_report_name">'Print Appointment - %s' % (object.short_name).replace('/', '')</field>
+        <field name="binding_model_id" ref="model_hr_applicant"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <record id="hr_recruit_im30_form" model="ir.actions.report">
+        <field name="name">IM30 Form</field>
+        <field name="model">hr.applicant</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">ap_recruitment18.im30_form</field>
+        <field name="report_file">ap_recruitment18.im30_form</field>
+        <field name="print_report_name">'Print IM30 From - %s' % (object.short_name).replace('/', '')</field>
+        <field name="binding_model_id" ref="model_hr_applicant"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <record id="hr_recruit_insurance_request" model="ir.actions.report">
+        <field name="name">Insurance Request</field>
+        <field name="model">hr.applicant</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">ap_recruitment18.insurance_request</field>
+        <field name="report_file">ap_recruitment18.insurance_request</field>
+        <field name="print_report_name">'Print insurance_request - %s' % (object.short_name).replace('/', '')</field>
+        <field name="binding_model_id" ref="model_hr_applicant"/>
+        <field name="binding_type">report</field>
+    </record>
+
+
+    <record id="hr_recruit_srilankan_embassy_domestic_agreement" model="ir.actions.report">
+        <field name="name">Srilankan Embassy Domestic Agreement</field>
+        <field name="model">hr.applicant</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">ap_recruitment18.srilankan_embassy_domestic_agreement</field>
+        <field name="report_file">ap_recruitment18.srilankan_embassy_domestic_agreement</field>
+        <field name="print_report_name">'Print srilankan_embassy_domestic_agreement - %s' % (object.short_name).replace('/', '')</field>
+        <field name="binding_model_id" ref="model_hr_applicant"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <record id="hr_recruit_srilankan_embassy_company_agreement" model="ir.actions.report">
+        <field name="name">Srilankan Embassy Company Agreement</field>
+        <field name="model">hr.applicant</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">ap_recruitment18.srilankan_embassy_company_agreement</field>
+        <field name="report_file">ap_recruitment18.srilankan_embassy_company_agreement</field>
+        <field name="print_report_name">'Print srilankan_embassy_company_agreement - %s' % (object.short_name).replace('/', '')</field>
+        <field name="binding_model_id" ref="model_hr_applicant"/>
+        <field name="binding_type">report</field>
+    </record>
+
+
+
+
+
+</odoo>

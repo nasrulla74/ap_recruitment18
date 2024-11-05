@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="action_owl_recruit_dashboard" model="ir.actions.client">
+            <field name="name">Recruit Dashboard</field>
+            <field name="tag">ap_recruitment18.recruit_dashboard</field>
+        </record>
+
+        <menuitem id="recruit_listmenu_dashboard"
+              name="Dashboard"
+              action="action_owl_recruit_dashboard"
+              parent="hr_recruitment.menu_hr_recruitment_root"
+              sequence="1"/>
+
+    </data>
+</odoo>

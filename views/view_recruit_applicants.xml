@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<record model="ir.ui.view" id="xpat_visa_fees_recruit_applicant_tree">
+		<field name="name">Recruit Applicants</field>
+		<field name="model">hr.applicant</field>
+		<field name="arch" type="xml">
+			<list string="Visa Fees" create="1">
+				<field name="partner_name"/>
+				<field name="wp_number" />
+				<field name="slot_expiry"/>
+				<field name="medical_expiry"/>
+				<field name="wp_expiry"/>
+				<field name="insurance_expiry"/>
+				<field name="card_expiry"/>
+				<field name="pp_expiry"/>
+				<field name="nationality"/>
+				<field name="stage_id"/>
+			</list>
+		</field>
+	</record>
+
+
+	<record id="xpat_visa_fees_applicant_recruit_from" model="ir.ui.view">
+		<field name="name">xpat.visa.fees.applicant.recruit.tree</field>
+		<field name="model">hr.applicant</field>
+		<field name="arch" type="xml">
+			<form string="Visa Appelications">
+				<header>
+				</header>
+				<sheet>
+
+
+					<group>
+						<group>
+							<field name="partner_name"/>
+							<field name="wp_number" />
+							<field name="slot_expiry"/>
+							<field name="medical_expiry"/>
+							<field name="wp_expiry"/>
+
+						</group>
+						<group>
+
+							<field name="insurance_expiry"/>
+							<field name="card_expiry"/>
+							<field name="nationality"/>
+							<field name="stage_id"/>
+							<field name="job_id" invisible="1"/>
+							<field name="company_id" invisible="1"/>
+						</group>
+
+
+
+					</group>
+<!--					<notebook>-->
+<!--						<page string="Slot Fees">-->
+<!--                            <field name="slot_app_ids">-->
+
+<!--                            </field>-->
+<!--                        </page>-->
+
+<!--						<page string="Visa Fees">-->
+<!--                            <field name="visa_app_ids">-->
+
+<!--                            </field>-->
+<!--                        </page>-->
+<!--					</notebook>-->
+
+				</sheet>
+			</form>
+		</field>
+	</record>
+
+
+
+
+	<record model="ir.ui.view" id="xpat_visa_fees_applicant_recruit_search">
+		<field name="name">xpat.visa.fees.applicant.recruit.search</field>
+		<field name="model">hr.applicant</field>
+		<field name="arch" type="xml">
+			<search string="Visa">
+				<field name="partner_name"/>
+				<field name="stage_id"/>
+				<field name="wp_number"/>
+				<field name="partner_id"/>
+				<field name="client_id"/>
+
+                <separator/>
+                <filter name="filter_active_applications" string="Active applications" domain="[
+                ('stage_id', '=', 'Arrived')]"/>
+				<separator/>
+				 <filter name="filter_inactive_applications" string="Inactive applications" domain="[
+                ('stage_id', '!=', 'Arrived')]"/>
+
+
+
+                <searchpanel>
+                    <field name="client_id" enable_counters="1" />
+                </searchpanel>
+
+			</search>
+		</field>
+	</record>
+
+
+	<record id="xpat_visa_fees_applicant_recruit" model="ir.actions.act_window">
+		<field name="name">Recruit Applications</field>
+		<field name="res_model">hr.applicant</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="view_mode">list,form</field>
+<!--		<field name="domain">[('stage_id', '=', 'Arrived')]</field>-->
+		<field name="search_view_id" ref="xpat_visa_fees_applicant_recruit_search"/>
+		<field name="context">{'search_default_filter_active_applications': 1}</field>
+<!--		<field name="context">{'default_is_room': True}</field>-->
+		<field name="view_ids"
+                eval="[(5, 0, 0),
+                    (0, 0, {'sequence': 2, 'view_mode': 'list', 'view_id': ref('xpat_visa_fees_recruit_applicant_tree')}),
+                ]"/>
+
+		<field name="help" type="html">
+			<p class="o_view_nocontent_smiling_face">
+            Create a Visa Fee
+          </p>
+		</field>
+	</record>
+
+
+
+
+
+    <menuitem
+            id="xpat_view_recruit_applications_main_menu"
+            name="Recruitment Applications"
+			parent="hr_recruitment.menu_hr_recruitment_root"
+              sequence="0"
+			action="xpat_visa_fees_applicant_recruit"
+	/>
+
+
+
+</odoo>

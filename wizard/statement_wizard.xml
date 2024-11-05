@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+     <record id="recruit_statement_wizard_form" model="ir.ui.view">
+        <field name="name">recruit.statement.wizard.form</field>
+        <field name="model">recruit.statement.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                <group>
+                        <group>
+                            <field name="partner_id" />
+                            <field name="start_date" />
+                        </group>
+                </group>
+                     <footer>
+                    <button name="get_summary" string="Get Summary" type="object" class="btn-primary" confirm="Are you sure to proceed?"/>
+                </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+
+     <record id="recruit_statement_wizard_action" model="ir.actions.act_window">
+         <field name="name">Monthly Statement</field>
+
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">recruit.statement.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="recruit_statement_wizard_form"/>
+        <field name="target">new</field>
+    </record>
+
+
+    <menuitem id="recruit_statement_wizard_menu"
+              name="Monthly Statement"
+              action="recruit_statement_wizard_action"
+              parent="hr_recruitment.report_hr_recruitment"
+              sequence="10"/>
+
+</odoo>

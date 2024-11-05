@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="mail_template_data_wp_expiry" model="mail.template">
+            <field name="name">hr applicant: Work Permit Expiry</field>
+            <field name="model_id" ref="ap_recruitment18.model_hr_applicant"/>
+            <field name="subject">WP Expiry of {{ object.partner_name }}</field>
+            <field name="email_from">{{ object.user_id.email }}</field>
+            <field name="email_to">{{ object.partner_id.email }}</field>
+            <field name="email_cc">nasrullaw74@gmail.com</field>
+            <field name="description">Work Permit Expiry Notification</field>
+            <field name="body_html" type="html">
+                <div>
+                    <p style="margin: 0px; padding: 0px; font-size: 15px;">
+                        Dear <t t-out="object.partner_id.name"></t>
+                        <br/><br/>
+                        <br/>
+                        This is to inform you that <span style="font-weight:bold;"><t t-out="object.partner_name"></t></span> work permit is expiring on <span style="font-weight:bold;"><t t-out="object.wp_expiry"></t></span>
+                        <br/><br/>
+                        Do not hesitate to contact us if you have any questions.
+                        <br/><br/>
+                        Best regards,
+
+                        <t t-if="not is_html_empty(user.signature)">
+                            <br/><br/>
+                            <t t-out="user.signature or ''">--<br/>Appeul Services</t>
+                        </t>
+                    </p>
+                </div>
+
+            </field>
+<!--            <field name="lang">{{ object.partner_id.lang }}</field>-->
+<!--            <field name="auto_delete" eval="True"/>-->
+        </record>
+    </data>
+</odoo>
+
+
+
+

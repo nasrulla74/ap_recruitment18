@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Inherited res.company form view -->
+        <record id="ap_view_res_partner_layout_inherit" model="ir.ui.view">
+            <field name="name">ap.res.partner.form.layout.inherit</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <data>
+                    <xpath expr="//notebook" position="inside">
+                        <page string="Header &amp; Footer Layout">
+
+                            <div class="o_row">
+                                 <h6>Header : </h6>
+                                <field name="customer_header" widget="image" class="float-left oe_avatar" string="Header"
+                                       options="{'size': [300, 80]}" required="0"/>
+                                <field name="customer_header_width" required="0"/>
+                                <span>,</span>
+                                <field name="customer_header_height" required="0"/>
+                            </div>
+                            <div class="o_row">
+                                 <h6>Footer : </h6>
+                                <field name="customer_footer" widget="image" class="float-left oe_avatar"
+                                       options="{'size': [300, 80]}" required="0"/>
+                                <field name="customer_footer_width" required="0"/>
+                                <span>,</span>
+                                <field name="customer_footer_height" required="0"/>
+                            </div>
+                            <div class="o_row">
+                                 <h6>Company Seal : </h6>
+                                <field name="customer_seal" widget="image" class="float-left oe_avatar"
+                                       options="{'size': [300, 80]}"/>
+
+                            </div>
+                            <div class="o_row">
+                                <h6>Signature : </h6>
+                                <field name="customer_sign" widget="image" class="float-left oe_avatar"
+                                       />
+
+                            </div>
+                        </page>
+                    </xpath>
+                </data>
+            </field>
+        </record>
+
+
+
+
+
+    </data>
+</odoo>
+

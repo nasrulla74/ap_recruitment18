@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="action_xpat_worktype" model="ir.actions.act_window">
+        <field name="name">Xpat Woke Types</field>
+        <field name="res_model">xpat.worktypes</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_xpat_worktype" name="Xpat Work Types"
+            parent="hr_recruitment.menu_hr_recruitment_config_jobs" action="action_xpat_worktype"/>
+
+
+</odoo>
