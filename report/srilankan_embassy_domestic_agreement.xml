@@ -15,21 +15,21 @@
                             </tr>
                             <tr>
                                 <td class="py-1" style="width:700pt; font-size: 17px;" valign="center">Name:</td>
-                                <td class="py-1 text-nowrap" style="font-size: 17px;" valign="left"><t t-esc="o.partner_id.name"/></td>
+                                <td class="py-1 text-nowrap" style="font-size: 17px;" valign="left"><t t-esc="o.client_id.name"/></td>
                             </tr>
                             <tr>
                                 <td class="py-1" style="width:700pt; font-size: 17px;" valign="center">Address:</td>
-                                <td class="py-1 text-nowrap" style="width:900pt; font-size: 17px;" valign="left"><t t-esc="o.partner_id.street"/> <t t-esc="o.partner_id.street2"/>
-                                    <t t-esc="o.partner_id.zip"/> <t t-esc="o.partner_id.city"/></td>
+                                <td class="py-1 text-nowrap" style="width:900pt; font-size: 17px;" valign="left"><t t-esc="o.client_id.street"/> <t t-esc="o.client_id.street2"/>
+                                    <t t-esc="o.client_id.zip"/> <t t-esc="o.client_id.city"/></td>
                             </tr>
                             <tr>
                                 <td class="py-1" style="width:700pt; font-size: 17px;" valign="center">Id Card No/PPT No:</td>
                                 <td class="py-1" style="width:900pt; font-size: 17px;" valign="left">
-                                    <t t-esc="o.partner_id.vat"/>
+                                    <t t-esc="o.client_id.company_registry"/>
 
                                 </td>
                                 <td class="py-1" style="width:700pt; font-size: 17px;" valign="center">Tel No:</td>
-                                <td class="py-1" style="width:900pt; font-size: 17px;" valign="left"><t t-esc="o.partner_id.mobile"/></td>
+                                <td class="py-1" style="width:900pt; font-size: 17px;" valign="left"><t t-esc="o.client_id.mobile"/></td>
                             </tr>
 
                             <tr>
@@ -68,27 +68,6 @@
                             </tr>
 
 
-<!--                            <tr>-->
-<!--                                <td class="text-decoration-underline text-nowrap py-1 mt-2" style="width:700pt; font-size: 17px;"  valign="center">DETAILS OF THE EMPLOYMENT</td>-->
-
-<!--                            </tr>-->
-<!--                            <tr>-->
-<!--                                <td class="py-1 text-nowrap" valign="left">-->
-
-<!--                                        Title or work assigned: <t t-esc="o.xpat_position"/> Place of work: <t t-esc="o.work_site_id.name"/>-->
-<!--                                        <t t-esc="o.work_site_id.address"/>-->
-<!--                                </td>-->
-
-
-
-<!--                            </tr>-->
-<!--                            <tr>-->
-<!--                                 <td class="py-1 text-nowrap"  valign="left">-->
-<!--                                 The agreement made and entered into on this 13th (day) of January (month) 2024 (year) between-->
-
-<!--                                </td>-->
-
-<!--                            </tr>-->
 
 
                         </tbody>
@@ -124,9 +103,9 @@
                             </tr>
                             <tr>
                                 <td class="py-1"  valign="left">
-                                <t t-esc="o.partner_id.name"/> address is <span><t t-esc="o.partner_id.street"/> <t t-esc="o.partner_id.street2"/>
-                                    <t t-esc="o.partner_id.zip"/> <t t-esc="o.partner_id.city"/></span> Tel No: <span><t t-esc="o.partner_id.mobile"/></span>
-                                Holder of passport no/Id. No: <span><t t-esc="o.partner_id.vat"/></span> (herein after called the Employer) and <span><t t-esc="o.partner_name"/></span>
+                                <t t-esc="o.client_id.name"/> address is <span><t t-esc="o.client_id.street"/> <t t-esc="o.client_id.street2"/>
+                                    <t t-esc="o.client_id.zip"/> <t t-esc="o.client_id.city"/></span> Tel No: <span><t t-esc="o.client_id.mobile"/></span>
+                                Holder of passport no/Id. No: <span><t t-esc="o.client_id.company_registry"/></span> (herein after called the Employer) and <span><t t-esc="o.partner_name"/></span>
                                 (herein after called the Employee) with residence at <span><t t-esc="o.permanent_address"/></span> holder of Passport No: <span><t t-esc="o.passport_number"/></span>
                                 And registered at the High Commission/ Consulate of the Democratic Socialist Republic of Sri Lanka in the Republic of Maldives.
 
@@ -310,7 +289,7 @@ manifest therein full acceptance of thc terms and conditions embodied herein by 
                         <tbody>
                             <tr>
                                 <td class="px-3 py-1">
-                                    <t t-esc="o.partner_id.name"/>
+                                    <t t-esc="o.client_id.name"/>
                                 </td>
                                 <td class="px-3 py-1">
                                     <t t-esc="o.partner_name"/> / <t t-esc="o.passport_number"/>
@@ -352,11 +331,11 @@ Maldives.
                         <tbody>
                              <tr>
                                 <td class="py-1" style="width:700pt; font-size: 17px;" valign="center">Identity Number:</td>
-                                <td class="py-1 text-nowrap" style="font-size: 17px;" valign="left"><t t-esc="o.partner_id.vat"/></td>
+                                <td class="py-1 text-nowrap" style="font-size: 17px;" valign="left"><t t-esc="o.client_id.company_registry"/></td>
                             </tr>
                             <tr>
                                 <td class="py-1" style="width:700pt; font-size: 17px;" valign="center">Name:</td>
-                                <td class="py-1 text-nowrap" style="font-size: 17px;" valign="left"><t t-esc="o.partner_id.name"/></td>
+                                <td class="py-1 text-nowrap" style="font-size: 17px;" valign="left"><t t-esc="o.client_id.name"/></td>
                             </tr>
                              <tr>
                                 <td class="py-1" style="width:700pt; font-size: 17px;" valign="center">Age:</td>
@@ -364,27 +343,27 @@ Maldives.
                             </tr>
                             <tr>
                                 <td class="py-1" style="width:700pt; font-size: 17px;" valign="center">Sex:</td>
-                                <td class="py-1 text-nowrap" style="width:900pt; font-size: 17px;" valign="left"><t t-esc="o.partner_id.gender"/>
+                                <td class="py-1 text-nowrap" style="width:900pt; font-size: 17px;" valign="left"><t t-esc="o.gender"/>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="py-1" style="width:700pt; font-size: 17px;" valign="center">Nationality:</td>
-                                <td class="py-1 text-nowrap" style="width:900pt; font-size: 17px;" valign="left"><t t-esc="o.partner_id.country_id.name"/>
+                                <td class="py-1 text-nowrap" style="width:900pt; font-size: 17px;" valign="left"><t t-esc="o.client_id.country_id.name"/>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="py-1" style="width:700pt; font-size: 17px;" valign="center">Type of Occupation:</td>
-                                <td class="py-1 text-nowrap" style="width:900pt; font-size: 17px;" valign="left"><t t-esc="o.partner_id.x_occupation_type"/>
+                                <td class="py-1 text-nowrap" style="width:900pt; font-size: 17px;" valign="left">
                                 </td>
                             </tr>
                             <tr>
                                 <td class="py-1" style="width:700pt; font-size: 17px;" valign="center">Occupation:</td>
-                                <td class="py-1 text-nowrap" style="width:900pt; font-size: 17px;" valign="left"><t t-esc="o.partner_id.function"/>
+                                <td class="py-1 text-nowrap" style="width:900pt; font-size: 17px;" valign="left"><t t-esc="o.client_id.function"/>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="py-1" style="width:700pt; font-size: 17px;" valign="center">Monthly Income US$:</td>
-                                <td class="py-1 text-nowrap" style="width:900pt; font-size: 17px;" valign="left"><t t-esc="o.partner_id.x_monthly_income"/>
+                                <td class="py-1 text-nowrap" style="width:900pt; font-size: 17px;" valign="left">
                                 </td>
                             </tr>
 
@@ -416,12 +395,12 @@ Maldives.
                             <tr>
                                 <td class="p-3"></td>
                                 <td class="p-3">PO Box</td>
-                                <td class="p-3"><t t-esc="o.partner_id.zip"/></td>
+                                <td class="p-3"><t t-esc="o.client_id.zip"/></td>
                                 <td class="p-3"></td>
                             </tr><tr>
                                 <td class="p-3"></td>
                                 <td class="p-3">House</td>
-                                <td class="p-3"><t t-esc="o.partner_id.street"/></td>
+                                <td class="p-3"><t t-esc="o.client_id.street"/></td>
                                 <td class="p-3"></td>
                             </tr><tr>
                                 <td class="p-3"></td>
@@ -431,7 +410,7 @@ Maldives.
                             </tr><tr>
                                 <td class="p-3"></td>
                                 <td class="p-3">Street</td>
-                                <td class="p-3"><t t-esc="o.partner_id.street2"/></td>
+                                <td class="p-3"><t t-esc="o.client_id.street2"/></td>
                                 <td class="p-3"></td>
                             </tr><tr>
                                 <td class="p-3"></td>
@@ -441,7 +420,7 @@ Maldives.
                             </tr><tr>
                                 <td class="p-3"></td>
                                 <td class="p-3">City</td>
-                                <td class="p-3"><t t-esc="o.partner_id.city"/></td>
+                                <td class="p-3"><t t-esc="o.client_id.city"/></td>
                                 <td class="p-3"></td>
                             </tr><tr>
                                 <td class="p-3"></td>
@@ -451,7 +430,7 @@ Maldives.
                             </tr><tr>
                                 <td class="p-3"></td>
                                 <td class="p-3">Mobile</td>
-                                <td class="p-3"><t t-esc="o.partner_id.mobile"/></td>
+                                <td class="p-3"><t t-esc="o.client_id.mobile"/></td>
                                 <td class="p-3"></td>
                             </tr><tr>
                                 <td class="p-3">Fax</td>
@@ -460,7 +439,7 @@ Maldives.
                                 <td class="p-3"></td>
                             </tr><tr>
                                 <td class="p-3">Email</td>
-                                <td class="p-3"><t t-esc="o.partner_id.email"/></td>
+                                <td class="p-3"><t t-esc="o.client_id.email"/></td>
                                 <td class="p-3"></td>
                                 <td class="p-3"></td>
                             </tr>

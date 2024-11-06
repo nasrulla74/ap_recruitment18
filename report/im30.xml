@@ -103,18 +103,14 @@
                             <span class="text-uppercase text-nowrap" t-esc="o.mobile_number" />
                         </div>
 
-<!--                        <t t-if="o.partner_id.is_company">-->
-<!--                            <div style="position:fixed; left: 195px; top: 1010px;">-->
-<!--                                <span class="text-uppercase text-nowrap" t-esc="o.partner_id.name" />-->
-<!--                            </div>-->
-<!--                        </t>-->
+
                             <t>
                             <div style="position:fixed; left: 195px; top: 1010px;">
-                                <span class="text-uppercase text-nowrap" t-esc="o.partner_id.name" />
+                                <span class="text-uppercase text-nowrap" t-esc="o.client_id.name" />
                             </div>
                         </t>
                         <div style="position:fixed; left: 725px; top: 1015px;">
-                            <span class="text-uppercase text-nowrap" t-esc="o.partner_id.vat" />
+                            <span class="text-uppercase text-nowrap" t-esc="o.client_id.company_registry" />
                         </div>
 
                         <div style="position:fixed; left: 195px; top: 1043px;">
@@ -125,7 +121,7 @@
                             <span class="text-uppercase text-nowrap" t-esc="o.sponsor_position" />
                         </div>
                             <div style="position:fixed; left: 610px; top: 1058px;">
-                            <span class="text-uppercase text-nowrap" t-esc="o.partner_id.mobile" />
+                            <span class="text-uppercase text-nowrap" t-esc="o.client_id.mobile" />
                         </div>
 
                             <t t-if="o.apply_date">
@@ -142,10 +138,10 @@
                                 </div>
                         </t>
                             <div style="position:fixed; left: 710px; top: 1070px;">
-                                <img t-if="o.partner_id.customer_seal"  style="max-height:95pt;max-width:90%" t-att-src="'data:image/*;base64,%s' % o.partner_id.customer_seal.decode('utf-8')"/>
+                                <img t-if="o.client_id.customer_seal"  style="max-height:95pt;max-width:90%" t-att-src="'data:image/*;base64,%s' % o.client_id.customer_seal.decode('utf-8')"/>
                             </div>
                             <div style="position:fixed; left: 610px; top: 1050px;">
-                                <img t-if="o.partner_id.customer_sign"  style="max-height:95pt;max-width:90%" t-att-src="'data:image/*;base64,%s' % o.partner_id.customer_sign.decode('utf-8')"/>
+                                <img t-if="o.client_id.customer_sign"  style="max-height:95pt;max-width:90%" t-att-src="'data:image/*;base64,%s' % o.client_id.customer_sign.decode('utf-8')"/>
                             </div>
 
 

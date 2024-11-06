@@ -6,7 +6,7 @@
                 <t t-call="web.external_layout">
                        <div class="page">
 
-                         <img t-if="o.partner_id.customer_header" t-att-src="'data:image/*;base64,%s' % o.partner_id.customer_header.decode('utf-8')"/>
+                         <img t-if="o.client_id.customer_header" t-att-src="'data:image/*;base64,%s' % o.client_id.customer_header.decode('utf-8')"/>
 
                            <h6 class="text-decoration-underline py-3" style="text-align:center; font-size: 24px;">OFFER LETTER</h6>
 
@@ -19,6 +19,7 @@
                                     <tr>
                                       <td class="py-1" style="width:700pt; font-size: 17px;" valign="center">Name:</td>
                                       <td class="py-1" style="width:900pt; font-size: 17px;" valign="left"><t t-esc="o.partner_name"/></td>
+
                                     </tr>
 
                                     <tr>
@@ -109,13 +110,13 @@
                                        <tr>
                                       <td class="py-4" style="width:700pt;font-size: 17px;" valign="center">Signature/Stamp:
                                         <div style="position:fixed; left: 270px; top: 1100px;">
-                                            <img t-if="o.partner_id.customer_seal"  style="max-height:95pt;max-width:90%" t-att-src="'data:image/*;base64,%s' % o.partner_id.customer_seal.decode('utf-8')"/>
+                                            <img t-if="o.client_id.customer_seal"  style="max-height:95pt;max-width:90%" t-att-src="'data:image/*;base64,%s' % o.client_id.customer_seal.decode('utf-8')"/>
                                         </div>
                                         <div style="position:fixed; left: 170px; top: 1080px;">
-                                            <img t-if="o.partner_id.customer_sign"  style="max-height:95pt;max-width:90%" t-att-src="'data:image/*;base64,%s' % o.partner_id.customer_sign.decode('utf-8')"/>
+                                            <img t-if="o.client_id.customer_sign"  style="max-height:95pt;max-width:90%" t-att-src="'data:image/*;base64,%s' % o.client_id.customer_sign.decode('utf-8')"/>
                                         </div>
-<!--                                       <img t-if="o.partner_id.customer_seal"  style="max-height:95pt;max-width:90%" t-att-src="'data:image/*;base64,%s' % o.partner_id.customer_seal.decode('utf-8')"/>-->
-<!--                                       <img t-if="o.partner_id.customer_sign"  style="max-height:95pt;max-width:90%" t-att-src="'data:image/*;base64,%s' % o.partner_id.customer_sign.decode('utf-8')"/>-->
+<!--                                       <img t-if="o.client_id.customer_seal"  style="max-height:95pt;max-width:90%" t-att-src="'data:image/*;base64,%s' % o.client_id.customer_seal.decode('utf-8')"/>-->
+<!--                                       <img t-if="o.client_id.customer_sign"  style="max-height:95pt;max-width:90%" t-att-src="'data:image/*;base64,%s' % o.client_id.customer_sign.decode('utf-8')"/>-->
 
                                       </td>
                                         <td class="py-1" style="width:900pt;" valign="center">Signature: </td>

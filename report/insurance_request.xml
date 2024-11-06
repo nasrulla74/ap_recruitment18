@@ -10,16 +10,16 @@
 
 
                             <div style="position:fixed; left: 135px; top: 230px;">
-                                <span class="text-uppercase text-nowrap" t-esc="o.partner_id.name" />
+                                <span class="text-uppercase text-nowrap" t-esc="o.client_id.name" />
                             </div>
 
 
                             <div style="position:fixed; left: 700px; top: 230px;">
-                            <span class="text-uppercase text-nowrap" t-esc="o.partner_id.vat" />
+                            <span class="text-uppercase text-nowrap" t-esc="o.client_id.company_registry" />
                         </div>
 
                         <div style="position:fixed; left: 135px; top: 275px;">
-                            <t t-esc="o.partner_id.street"/> <t t-esc="o.partner_id.street2"/> <t class="text-nowrap" t-esc="o.partner_id.city"/>
+                            <t t-esc="o.client_id.street"/> <t t-esc="o.client_id.street2"/> <t class="text-nowrap" t-esc="o.client_id.city"/>
                         </div>
 
                             <div style="position:fixed; left: 840px; top: 275px;">
@@ -27,11 +27,11 @@
                         </div>
 
                         <div style="position:fixed; left: 150px; top: 305px;">
-                            <span class="text-uppercase text-nowrap" t-esc="o.partner_id.mobile" />
+                            <span class="text-uppercase text-nowrap" t-esc="o.client_id.mobile" />
                         </div>
 
                              <div style="position:fixed; left: 520px; top: 305px;">
-                            <span class="text-nowrap" t-esc="o.partner_id.email" />
+                            <span class="text-nowrap" t-esc="o.client_id.email" />
                         </div>
                             <div style="position:fixed; left: 87px; top: 388px;">
                             <span>X</span>
@@ -71,10 +71,10 @@
                                     <span t-esc="datetime.datetime.now().strftime('%d-%m-%Y')"></span>
                                 </div>
 <!--                            <div style="position:fixed; left: 400px; top: 900px;">-->
-<!--                                <img t-if="o.partner_id.customer_seal"  style="max-height:95pt;max-width:90%" t-att-src="'data:image/*;base64,%s' % o.partner_id.customer_seal.decode('utf-8')"/>-->
+<!--                                <img t-if="o.client_id.customer_seal"  style="max-height:95pt;max-width:90%" t-att-src="'data:image/*;base64,%s' % o.client_id.customer_seal.decode('utf-8')"/>-->
 <!--                            </div>-->
                             <div style="position:fixed; left: 300px; top: 930px;">
-                                <img t-if="o.partner_id.customer_sign"  style="max-height:95pt;max-width:90%" t-att-src="'data:image/*;base64,%s' % o.partner_id.customer_sign.decode('utf-8')"/>
+                                <img t-if="o.client_id.customer_sign"  style="max-height:95pt;max-width:90%" t-att-src="'data:image/*;base64,%s' % o.client_id.customer_sign.decode('utf-8')"/>
                             </div>
 
 

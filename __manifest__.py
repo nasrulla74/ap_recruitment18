@@ -18,7 +18,7 @@
         # 'wizard/statement_wizard.xml',
         'views/recruit_inherit_view.xml',
         'views/xpat_worktype_view.xml',
-         # 'views/header_footer_view.xml',
+        'views/header_footer_view.xml',
         'views/view_recruit_applicants.xml',
         'report/appointment_letter.xml',
         'report/offer_letter.xml',
