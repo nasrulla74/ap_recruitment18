@@ -3,32 +3,32 @@
     <template id="appointment_letter">
         <t t-call="web.html_container">
             <t t-foreach="docs" t-as="o">
-                <t t-call="web.external_layout">
+<!--                <t t-call="web.external_layout">-->
                        <div class="page">
 
                          <img t-if="o.client_id.customer_header" t-att-src="'data:image/*;base64,%s' % o.client_id.customer_header.decode('utf-8')"/>
 
-                           <h6 class="text-decoration-underline py-3" style="text-align:center;">APPOINTMENT LETTER</h6>
-                           <p class="text-decoration-underline">Details of the Employer</p>
+                           <h6 class="text-decoration-underline py-3" style="text-align:center; font-size: 20px;">APPOINTMENT LETTER</h6>
+                           <p style="font-size: 17px; font-weight: bold; text-decoration: underline;">Details of the Employer</p>
                                 <table class="mt-0 table-borderless">
 
                                   <tbody>
                                     <tr>
-                                      <td class="py-1" style="width:700pt; font-size: 17px;" valign="center">Name:</td>
-                                      <td class="py-1" style="width:900pt; font-size: 17px;" valign="left"><t t-esc="o.partner_name"/></td>
+                                      <td class="" style="width:700pt; font-size: 17px;" valign="center">Name:</td>
+                                      <td class="" style="width:900pt; font-size: 17px;" valign="left"><t t-esc="o.client_id.name"/></td>
                                     </tr>
 
                                     <tr>
-                                      <td class="py-1" style="width:700pt; font-size: 17px;" valign="center">Address:</td>
-                                      <td class="py-1" style="width:900pt; font-size: 17px;" valign="left">
+                                      <td class="" style="width:700pt; font-size: 17px;" valign="center">Address:</td>
+                                      <td class="" style="width:900pt; font-size: 17px;" valign="left">
                                         <t t-esc="o.client_id.street"/> <t t-esc="o.client_id.street2"/>
                                         <t t-esc="o.client_id.zip"/> <t t-esc="o.client_id.city"/>
                                       </td>
                                     </tr>
 
                                        <tr>
-                                      <td class="py-1" style="width:700pt; font-size: 17px;" valign="center">Telephone\Mobile Number:</td>
-                                      <td class="py-1" style="width:900pt; font-size: 17px;" valign="left"><t t-esc="o.client_id.phone"/></td>
+                                      <td class="" style="width:700pt; font-size: 17px;" valign="center">Telephone\Mobile Number:</td>
+                                      <td class="" style="width:900pt; font-size: 17px;" valign="left"><t t-esc="o.client_id.phone"/></td>
                                     </tr>
 
                                       <tr>
@@ -43,7 +43,7 @@
                                   </tbody>
                                 </table>
 
-                           <p class="text-decoration-underline mt-3">Details of the Employee</p>
+                           <p class="mt-3" style="font-size: 17px; font-weight: bold; text-decoration: underline;">Details of the Employee</p>
                                 <table class="mt-0 table-borderless">
 
                                   <tbody>
@@ -88,7 +88,7 @@
                                   </tbody>
                                 </table>
 
-                           <p class="text-decoration-underline mt-3">Details of Employment</p>
+                           <p class="text-decoration-underline mt-3" style="font-size: 17px; font-weight: bold; text-decoration: underline;">Details of Employment</p>
                                 <table class="mt-0 table-borderless">
 
                                   <tbody>
@@ -138,13 +138,13 @@
                                   </tbody>
                                 </table>
 
-                           <p class="text-decoration-underline mt-3">Details of Signee</p>
+                           <p class="mt-3" style="font-size: 17px; font-weight: bold; text-decoration: underline;">Details of Signee</p>
                                 <table class="mt-0 table-borderless">
 
                                   <tbody>
                                     <tr>
-                                      <td class="py-1" style="width:700pt;font-size: 17px;" valign="center">Employer/Sponsor: <t t-esc="o.sponsor_name"/></td>
-                                        <td class="py-1" style="width:900pt;font-size: 17px;" valign="center">Name of Employee: <t t-esc="o.partner_name"/></td>
+                                      <td class="py-1" style="width:700pt;font-size: 17px;" valign="center">Employer/Sponsor: <t t-esc="o.client_id.name"/> / <t t-esc="o.sponsor_name"/></td>
+<!--                                        <td class="py-1" style="width:900pt;font-size: 17px;" valign="center">Name of Employee: <t t-esc="o.partner_name"/></td>-->
                                     </tr>
 
                                     <tr>
@@ -153,31 +153,31 @@
                                     </tr>
 
                                        <tr>
-                                      <td class="py-4" style="width:700pt;font-size: 17px;" valign="center">Signature/Stamp:
-                                        <div style="position:fixed; left: 270px; top: 1100px;">
-                                            <img t-if="o.client_id.customer_seal"  style="max-height:95pt;max-width:90%" t-att-src="'data:image/*;base64,%s' % o.client_id.customer_seal.decode('utf-8')"/>
-                                        </div>
-                                        <div style="position:fixed; left: 170px; top: 1080px;">
-                                            <img t-if="o.client_id.customer_sign"  style="max-height:95pt;max-width:90%" t-att-src="'data:image/*;base64,%s' % o.client_id.customer_sign.decode('utf-8')"/>
-                                        </div>
-<!--                                       <img t-if="o.client_id.customer_seal"  style="max-height:95pt;max-width:90%" t-att-src="'data:image/*;base64,%s' % o.client_id.customer_seal.decode('utf-8')"/>-->
-<!--                                       <img t-if="o.client_id.customer_sign"  style="max-height:95pt;max-width:90%" t-att-src="'data:image/*;base64,%s' % o.client_id.customer_sign.decode('utf-8')"/>-->
+                                        <td class="py-4" style="width:700pt;font-size: 17px;" valign="center">Signature/Stamp:
+                                          <div style="position:fixed; left: 270px; top: 1100px;">
+                                              <img t-if="o.client_id.customer_seal"  style="max-height:95pt;max-width:90%" t-att-src="'data:image/*;base64,%s' % o.client_id.customer_seal.decode('utf-8')"/>
+                                          </div>
+                                          <div style="position:fixed; left: 170px; top: 1080px;">
+                                              <img t-if="o.client_id.customer_sign"  style="max-height:95pt;max-width:90%" t-att-src="'data:image/*;base64,%s' % o.client_id.customer_sign.decode('utf-8')"/>
+                                          </div>
+  <!--                                       <img t-if="o.client_id.customer_seal"  style="max-height:95pt;max-width:90%" t-att-src="'data:image/*;base64,%s' % o.client_id.customer_seal.decode('utf-8')"/>-->
+  <!--                                       <img t-if="o.client_id.customer_sign"  style="max-height:95pt;max-width:90%" t-att-src="'data:image/*;base64,%s' % o.client_id.customer_sign.decode('utf-8')"/>-->
 
-                                      </td>
-                                        <td class="py-1" style="width:900pt;" valign="center">Signature: </td>
+                                        </td>
+<!--                                        <td class="py-1" style="width:900pt;" valign="center">Signature: </td>-->
                                     </tr>
 
                                       <tr>
 
                                       <td class="py-1" style="width:700pt;font-size: 17px;" valign="center">Date: <span t-esc="o.apply_date.strftime('%d-%b-%Y')"/></td>
-                                        <td class="py-1" style="width:900pt;font-size: 17px;" valign="center">Date: <span t-esc="o.apply_date.strftime('%d-%b-%Y')"/></td>
+<!--                                        <td class="py-1" style="width:900pt;font-size: 17px;" valign="center">Date: <span t-esc="o.apply_date.strftime('%d-%b-%Y')"/></td>-->
                                     </tr>
 
 
                                   </tbody>
                                 </table>
                        </div>
-                </t>
+<!--                </t>-->
             </t>
         </t>
 
